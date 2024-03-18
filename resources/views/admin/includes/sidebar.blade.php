@@ -39,10 +39,31 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="pages/charts/chartjs.html">
-          <i class="mdi mdi-chart-pie menu-icon"></i>
-          <span class="menu-title">Charts</span>
+        <a class="nav-link" data-bs-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
+          <i class="mdi mdi-view-headline menu-icon"></i>
+          <span class="menu-title">Design Categories</span>
+          <i class="menu-arrow"></i>
         </a>
+        <div class="collapse" id="auth">
+          <ul class="nav flex-column sub-menu">
+            <li class="nav-item"> <a class="nav-link" href="{{url('/admin/Designcategory/view')}}"> View Designs categories </a></li>
+            <li class="nav-item"> <a class="nav-link" href="{{url('/admin/Designcategory/add')}}"> Add Designs categories </a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-bs-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
+          <i class="mdi mdi-view-headline menu-icon"></i>
+          <span class="menu-title">Designs</span>
+          <i class="menu-arrow"></i>
+        </a>
+        <div class="collapse" id="auth">
+          <ul class="nav flex-column sub-menu">
+            <li class="nav-item"> <a class="nav-link" href="{{url('/admin/Designs/view')}}"> View designs </a></li>
+            <li class="nav-item"> <a class="nav-link" href="{{url('/admin/Designs/add')}}"> Add
+                 designs  </a></li>
+          </ul>
+        </div>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="pages/tables/basic-table.html">

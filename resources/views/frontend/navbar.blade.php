@@ -12,16 +12,16 @@
           <li class="nav-item">
             <a class="nav-link" href="#"></a>
           </li>
-          <li class="nav-item dropdown">
+          {{-- <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="{{ url('/collections') }}" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Products
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#"></a></li>
-              <li><a class="dropdown-item" href="#"></a></li>
-              <li><a class="dropdown-item" href="#"></a></li>
+                @foreach ($categories as $c)
+              <li><a class="dropdown-item" href="#">{{$c->name}}</a></li>
+              @endforeach
             </ul>
-          </li>
+          </li> --}}
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Designs
@@ -58,7 +58,7 @@
             <!-- Authentication Links -->
             @guest
                 @if (Route::has('login'))
-                    <li class="nav-item"
+                    <li class="nav-item">
                         <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                     </li>
                 @endif
@@ -75,10 +75,22 @@
                     </a>
 
                     <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{{ url('profile') }}">
+                        <i class="bi bi-person-fill"></i> Profile
+                     </a>
+                     <hr/>
+                     <a class="dropdown-item" href="{{ url('myorders') }}">
+                        <i class="bi bi-list"></i> MyOrders
+                     </a>
+                     <hr/>
+                     <a class="dropdown-item" href="{{ url('cart') }}">
+                        <i class="bi bi-cart"></i> Cart
+                     </a>
+                    <hr/>
                         <a class="dropdown-item" href="{{ route('logout') }}"
                            onclick="event.preventDefault();
                                          document.getElementById('logout-form').submit();">
-                            {{ __('Logout') }}
+                             <i class="bi bi-arrow-left-circle"></i>{{ __(' Logout') }}
                         </a>
 
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">

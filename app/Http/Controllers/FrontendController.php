@@ -10,7 +10,8 @@ class FrontendController extends Controller
 {
     public function index(){
         $sliders=Slider::where('status',1)->get();
-        return view('frontend.index',compact('sliders'));
+        $categories=Category::where('status',1)->get();
+        return view('frontend.index',compact('sliders','categories'));
     }
 
     public function collection(){

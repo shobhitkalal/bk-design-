@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
+use App\Models\Admin\Slider;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,6 +25,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $sliders=Slider::where('status',1)->get();
+        $categories=Category::where('status',1)->get();
+        return view('home',compact('sliders','categories'));
     }
 }
