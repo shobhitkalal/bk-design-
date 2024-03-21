@@ -8,7 +8,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
       </div>
       @endif
-      e
+
 
       <div class="card">
         <div class="card-header">
@@ -35,7 +35,7 @@
                         <tr>
                           <td>{{$design->id}}</td>
                           <td>{{$design->name}}</td>
-                          <td>{{$design->name}}</td>
+                          {{-- <td>{{$design->name}}</td> --}}
                           <td>
                            @if ($design->DesignImages()->count() > 0)
                              <img src={{asset($design->DesignImages[0]->image)}}  height='50px' width='50px'/>

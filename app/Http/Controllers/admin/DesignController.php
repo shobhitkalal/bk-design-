@@ -61,7 +61,7 @@ class DesignController extends Controller
             $designs->update([
                 'designcategory_id'=>$validatedData['designcategory_id'],
                 'name'=>$validatedData['name'],
-                'DesignCategory'=>$request->DesignCategory,
+                // 'DesignCategory'=>$request->DesignCategory,
                 'description'=>$request->description
             ]);
             if($request->hasFile('image')){
@@ -79,7 +79,7 @@ class DesignController extends Controller
                 }
             }
 
- return redirect('/admin/Designs/view')->with('message','New design Added');
+ return redirect('/admin/Designs/view')->with('message','New design Updated...');
 }
 
     }

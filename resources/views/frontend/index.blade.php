@@ -19,8 +19,9 @@
       <span class="visually-hidden">Next</span>
     </button>
   </div>
-<h1 class="text-center"> ---------------------Exclusive Products--------------------</h1></hr>
+<h1 class="text-center" style="color:indigo"><b>---------------------Exclusive Products--------------------</b></h1></hr>
   <div class="container">
+
     <div class="row mt-5">
             @forelse ($categories as $c)
             <div class="col-3">
@@ -29,7 +30,7 @@
                 <div class="card-body">
                     <h5 class="card-title"> {{($c->name)}} </h5>
                     <p class="card-text"> </p>
-                    <a href="#" class="btn btn-primary"> click </a>
+                    <a href="{{ url('/collections/'.$c->name) }}" class="btn btn-primary"> View </a>
                 </div>
             </div>
             </div>

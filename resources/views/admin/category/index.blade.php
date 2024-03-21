@@ -36,7 +36,7 @@
                         <td scope="row">{{$c->id}}</td>
                         <td>{{$c->name}}</td>
                         <td>
-                        <img src="{{asset('$c->image')}}"
+                        <img src="{{asset($c->image)}}"
                         height='50px' width='50px'/>
                     </td>
                     <td>

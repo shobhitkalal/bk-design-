@@ -45,7 +45,7 @@
             @forelse ($categories as $c)
             <div class="col-3">
             <div class="card">
-                <img src="{{ asset($c->image) }}" class="card-img-top" height="200px">
+                <img src="{{asset($c->image)}}" class="card-img-top" height="200px">
                 <div class="card-body">
                     <h5 class="card-title"> {{($c->name)}} </h5>
                     <p class="card-text"> </p>
